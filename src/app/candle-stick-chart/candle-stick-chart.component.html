@@ -1,0 +1,30 @@
+  <!-- <span id="chart">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [yaxis]="chartOptions.yaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </span>
+  <span class="order-book">
+  <app-order-book/>
+  </span>
+  
+   -->
+   <div class="chart-order-container">
+    <div id="chart" class="chart-container">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+    
+    <div class="order-book-container">
+      <app-order-book></app-order-book>
+    </div>
+  </div>
+  

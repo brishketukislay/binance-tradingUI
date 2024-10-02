@@ -1,0 +1,95 @@
+$primary-color: #000;
+$secondary-color: #FFD700;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $primary-color;
+
+    .logo {
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    color: #FFF;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .auth-buttons {
+        .login, .sign-up {
+            background-color: $secondary-color;
+            color: $primary-color;
+            padding: 5px 10px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        nav {
+            order: 3;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .auth-buttons {
+            order: 2;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .logo {
+            font-size: 20px;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                li {
+                    margin: 5px 10px;
+                }
+            }
+        }
+
+        .auth-buttons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+
+            .login, .sign-up {
+                margin: 0 5px;
+            }
+        }
+    }
+}

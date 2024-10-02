@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+$negative-color: #dc3545;
+$positive-color: #28a745;
+
+.crypto-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+
+    .crypto-logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .crypto-info {
+        display: flex;
+        align-items: center;
+
+        .pair {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .price {
+            color: green;
+            margin-right: 20px;
+
+            span {
+                color: gray;
+                font-size: 0.9em;
+                margin-left: 5px;
+            }
+        }
+
+        .change,
+        .high,
+        .low,
+        .turnover {
+            margin-right: 20px;
+
+            .positive {
+                color: $positive-color;
+            }
+            .negative{
+                color: $negative-color;
+            }
+        }
+    }
+}
+
+.header-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+
+    .header-tab {
+        background-color: transparent;
+        border: none;
+        margin-right: 20px;
+        padding: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &.active {
+            font-weight: bold;
+            color: #ff9800;
+            border-bottom: 2px solid #ff9800;
+        }
+
+        &:hover {
+            color: #555;
+        }
+    }
+}
+
+// .order-table {
+//     width: 100%;
+//     padding: 20px;
+
+//     .tabs {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 20px;
+
+//         .tab {
+//             background-color: #f5f5f5;
+//             border: none;
+//             padding: 10px 20px;
+//             margin-right: 5px;
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+
+//             &.active {
+//                 background-color: #ff9800;
+//                 color: white;
+//             }
+
+//             &:hover {
+//                 background-color: #e0e0e0;
+//             }
+//         }
+
+//         .trading-performance {
+//             margin-left: auto;
+//             color: #ff9800;
+//             text-decoration: none;
+
+//             &:hover {
+//                 text-decoration: underline;
+//             }
+//         }
+//     }
+
+//     table {
+//         width: 100%;
+//         border-collapse: collapse;
+
+//         th,
+//         td {
+//             padding: 10px;
+//             text-align: left;
+//             border-bottom: 1px solid #ddd;
+//         }
+
+//         th {
+//             background-color: #f5f5f5;
+//         }
+
+//         .no-orders {
+//             text-align: center;
+//             color: #888;
+//         }
+//     }
+// }
+
+@media (max-width: 768px) {
+    .crypto-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .crypto-info {
+            margin-top: 10px;
+            text-align: left;
+
+            .pair,
+            .price,
+            .change,
+            .high,
+            .low,
+            .turnover {
+                margin-right: 0;
+                margin-bottom: 5px;
+                font-size: 0.9em;
+                display: block;
+            }
+
+            span {
+                display: inline-block;
+                margin-left: auto;
+                text-align: right;
+                width: auto;
+            }
+
+            .positive {
+                display: inline-block;
+                text-align: right;
+                width: auto;
+            }
+
+            div {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            div:first-child {
+                justify-content: flex-start;
+            }
+
+            div:last-child {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(2) {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(3) {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(4) {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(5) {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(6) {
+                justify-content: flex-start;
+            }
+
+            div:nth-child(7) {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .header-tabs {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .tab,
+    .header-tab {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .order-table {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
